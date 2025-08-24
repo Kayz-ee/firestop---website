@@ -1,4 +1,3 @@
-// Hardcoded products (based on architecture guidelines, page 8)
 const products = [
     {
         _id: '1',
@@ -18,7 +17,7 @@ const products = [
         barcode: '1234567890123',
         weight_kg: 9,
         inventory_qty: 100,
-        image1_url: 'https://via.placeholder.com/300?text=Dry+Powder'
+        image1_url: 'images/dry-powder-6kg.webp' // Updated path
     },
     {
         _id: '2',
@@ -38,7 +37,7 @@ const products = [
         barcode: '1234567890124',
         weight_kg: 14,
         inventory_qty: 75,
-        image1_url: 'https://via.placeholder.com/300?text=CO2'
+        image1_url: 'images/co2-5kg.webp' // Updated path
     },
     {
         _id: '3',
@@ -58,9 +57,10 @@ const products = [
         barcode: '1234567890125',
         weight_kg: 12,
         inventory_qty: 50,
-        image1_url: 'https://via.placeholder.com/300?text=Foam'
+        image1_url: 'images/foam-9l.webp' // Updated path
     }
 ];
+
 
 let cart = [];
 
