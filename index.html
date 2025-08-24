@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire.Stop! - Buy Fire Extinguishers Online in Nigeria</title>
+    <meta name="description" content="Buy high-quality fire extinguishers in Nigeria. CO₂, Dry Powder, Foam, and Water extinguishers with nationwide delivery.">
+    <meta name="keywords" content="fire extinguishers Nigeria, buy fire extinguishers Lagos, fire safety equipment, Fire.Stop!, SONCAP certified">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fire.Stop! - Stop Fire Before It Starts</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#education">Learn Fire Safety</a>
+        <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Protect Your Home & Business – Buy Fire Extinguishers Online</h2>
+        <p>Reliable, high-quality fire safety products delivered nationwide in Nigeria.</p>
+        <button onclick="document.getElementById('shop').scrollIntoView();">Shop Now</button>
+    </section>
+
+    <section class="categories" id="categories">
+        <h2>Product Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>CO₂ Extinguishers</h3>
+                <p>For electrical and flammable liquid fires.</p>
+                <button onclick="filterProducts('CO2')">View</button>
+            </div>
+            <div class="category-card">
+                <h3>Dry Chemical</h3>
+                <p>Multi-purpose ABC extinguishers.</p>
+                <button onclick="filterProducts('Dry Chemical')">View</button>
+            </div>
+            <div class="category-card">
+                <h3>Foam Extinguishers</h3>
+                <p>For flammable solids and liquids.</p>
+                <button onclick="filterProducts('Foam')">View</button>
+            </div>
+            <div class="category-card">
+                <h3>Water Extinguishers</h3>
+                <p>For Class A fires like wood and paper.</p>
+                <button onclick="filterProducts('Water')">View</button>
+            </div>
+            <div class="category-card">
+                <h3>Accessories</h3>
+                <p>Mounts, refills, and more.</p>
+                <button onclick="filterProducts('Accessories')">View</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="shop">
+        <h2>Our Products</h2>
+        <div class="filter">
+            <label for="filter-select">Filter by:</label>
+            <select id="filter-select" onchange="filterProducts(this.value)">
+                <option value="all">All</option>
+                <option value="size">Size</option>
+                <option value="type">Type</option>
+                <option value="capacity">Capacity</option>
+            </select>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="education" id="education">
+        <h2>Fire Safety Education</h2>
+        <p>Learn how to choose the right extinguisher, use it, and comply with Nigerian regulations.</p>
+        <ul>
+            <li><a href="#choosing">Choosing the Right Extinguisher</a></li>
+            <li><a href="#usage">How to Use an Extinguisher</a></li>
+            <li><a href="#compliance">Compliance in Nigeria</a></li>
+        </ul>
+    </section>
+
+    <section class="cart" id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: ₦<span id="cart-total">0</span></p>
+        <button onclick="document.getElementById('checkout').scrollIntoView();">Proceed to Checkout</button>
+    </section>
+
+    <section class="checkout" id="checkout">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Your Phone" required>
+            <input type="text" placeholder="Delivery Address" required>
+            <select required>
+                <option value="">Select Delivery Option</option>
+                <option value="standard">Standard (2-5 days, ₦4,500)</option>
+                <option value="express">Express (1-2 days, ₦6,000)</option>
+                <option value="pickup">Pickup in Lagos/Abuja (Free)</option>
+            </select>
+            <select required>
+                <option value="">Payment Method</option>
+                <option value="paystack">Paystack (Card/Bank Transfer/USSD)</option>
+                <option value="flutterwave">Flutterwave</option>
+            </select>
+            <input type="text" placeholder="Enter CAPTCHA (e.g., 1234)" required>
+            <button type="submit">Place Order</button>
+        </form>
+        <p>Note: This is a demo. Payments and shipping are mocked.</p>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2025 Fire.Stop! All rights reserved. Contact: info@firestop.ng | +234-123-4567</p>
+        <p>Secure payments | Nationwide delivery | <a href="#soncap">SONCAP Certified</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
